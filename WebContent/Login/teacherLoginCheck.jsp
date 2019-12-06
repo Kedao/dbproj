@@ -4,18 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>teacher</title>
 </head>
 <body>
 <jsp:useBean id="db" class="bean.DbHelper" scope="page"/>
 <%
     request.setCharacterEncoding("UTF-8");
     String username=(String)request.getParameter("username");
-    String password=(String)request.getParameter("password");//取出login.jsp的值
+    String password=(String)request.getParameter("password");
     
     request.getSession();
     //下面是数据库操作 *代表所有值
-    String sql="select * from teacher where name="+"'"+username+"'";//定义一个查询语句
+    String sql="select * from teacher where id="+"'"+username+"'";//定义一个查询语句
     ResultSet rs=db.executeQuery(sql);//运行上面的语句
     if(rs.next())
     {
@@ -29,7 +29,7 @@
     }
     else 
     {
-        out.print("<script language='javaScript'> alert('姓名不存在');</script>");
+        out.print("<script language='javaScript'> alert('该账号不存在');</script>");
         response.setHeader("refresh", "0;url=teacherLogin.jsp");
     }
     

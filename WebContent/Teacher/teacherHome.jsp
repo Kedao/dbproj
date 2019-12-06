@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>郭老师登录成功 </h1>
+<h1>登录成功 </h1>
 </body>
 </html>

@@ -4,27 +4,32 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>教师登录界面</title>
+<title>教师注册界面</title>
 </head>
 <body>
     <center>
-        <h1 style="color:red">教师登录</h1>
-            <form action="teacherLoginCheck.jsp" method="post">
+        <h1 style="color:red">教师注册</h1>
+            <form action="teacherRegisterCheck.jsp" method="post">
                 <table border="0">
                     <tr>
                         <td>工号：</td>
-                        <td><input type="text" name="username"></td>
+                        <td><input type="text" name="sno"></td>
                     </tr>
                     <tr>
                         <td>密码：</td>
                         <td><input type="password" name="password">
                         </td>
                     </tr>
+                    <tr>
+                        <td>姓名：</td>
+                        <td><input type="text" name="sname">
+                        </td>
+                    </tr>
                 </table>
             <br>
-                <input type="submit" value="登录" >
-                <input type="button" value="返回" onclick="location.href='http://localhost:8080/work/index.jsp'" >
-                <input type="button" value="注册" onclick="location.href='http://localhost:8080/work/Login/teacherRegister.jsp'" />
+          
+                <button type="submit">注册</button>
+                <input type="button" value="返回" onclick="location.href='http://localhost:8080/work/Login/teacherLogin.jsp'" />
             </form>
             
     </center>
